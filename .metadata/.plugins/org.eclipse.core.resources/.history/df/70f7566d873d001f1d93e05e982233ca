@@ -1,0 +1,17 @@
+package com.kh.practice1.func;
+
+public class Test35 {
+	public static void main(String []args) {
+		
+		
+		//	(int) Math.random()*10+1
+		int [] ar = new int [10];
+		
+		for(int i = 0; i <10 ; i++) {
+			(int) Math.random()*10+1
+			
+			
+		}
+		
+	}
+}

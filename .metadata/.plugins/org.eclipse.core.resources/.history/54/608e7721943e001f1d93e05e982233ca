@@ -1,0 +1,75 @@
+package com.kh.practice.tcp;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class TCPClient {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // 실제로 사용할 서버 IP 주소로 변경하세요
+        String ip = "127.0.0.1.9";
+        int port = 3000;
+
+        try {
+            Socket socket = new Socket(ip, port);
+            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+
+            // 서버 연결 성공
+            System.out.println("서버에 연결되었습니다: " + ip + ":" + port);
+            
+            // 메시지 송신 스레드
+            Thread sender = new Thread(() -> {
+                try {
+                    while (true) {
+                        System.out.print("메시지 입력: ");
+                        String message = sc.nextLine();
+                        
+                        pw.println(message);
+                        
+                        if ("exit".equalsIgnoreCase(message)) {
+                            System.out.println("연결을 종료합니다.");
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+
+            // 메시지 수신 스레드
+            Thread receiver = new Thread(() -> {
+                try {
+                    while (true) {
+                        String receive = br.readLine();
+                        if (receive == null || "exit".equalsIgnoreCase(receive)) {
+                            System.out.println("서버 연결이 종료되었습니다.");
+                            break;
+                        }
+                        System.out.println("서버 응답: " + receive);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+
+            sender.start();
+            receiver.start();
+
+            sender.join();
+            receiver.join();
+
+            socket.close();
+            br.close();
+            pw.close();
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}

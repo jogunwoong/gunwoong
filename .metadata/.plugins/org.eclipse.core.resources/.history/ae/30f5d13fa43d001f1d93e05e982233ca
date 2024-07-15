@@ -1,0 +1,21 @@
+package com.kh.practice1.func;
+
+import java.util.Scanner;
+
+public class Test42 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int row,col;
+		System.out.print("행의크기 : ");
+		row = sc.nextInt();
+		for(int i = 0; i < row; i++) {
+			System.out.print(i + "행의 열 크기 : ");
+			col = sc.nextInt();
+			System.out.println();
+		}
+	}
+
+}

@@ -1,0 +1,46 @@
+package com.kh.practice1.func;
+
+import java.util.Scanner;
+
+public class Test44 {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		String[][] ar = new String[6][6];
+
+		for (int i = 1; i < 6; i++) {
+			ar[i][0] = Integer.toString(i);
+			ar[0][i] = Integer.toString(i);
+		}
+		for (int i = 1; i < 6; i++) {
+			for (int j = 1; j < 6; j++) {
+				ar[i][j] = " ";
+			}
+		}
+
+		System.out.print("행 인덱스 입력 :");
+		int row = sc.nextInt();
+		System.out.print("열 인덱스 입력 :");
+		int col = sc.nextInt();
+
+		if (row >= 1 && row < 6 && col >= 1 && col < 6) {
+			ar[row][col] = "x";
+		} else {
+			System.out.println("잘못된 인덱스 입니다. 1~5사이의 값을 입력하세요.");
+		}
+
+		for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 6; j++) {
+				if (ar[i][j] == null) {
+					System.out.print("");
+				}
+				System.out.print(ar[i][j] + " ");
+
+			}
+			System.out.println();
+		}
+
+	}
+
+}

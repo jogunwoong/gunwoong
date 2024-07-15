@@ -1,0 +1,10 @@
+package com.kh.ch06_objectArray;
+
+public class Product {
+	
+	private String name;
+	private int price;
+	
+	
+
+}

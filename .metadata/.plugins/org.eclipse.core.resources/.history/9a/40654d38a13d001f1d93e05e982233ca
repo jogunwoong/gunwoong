@@ -1,0 +1,29 @@
+package com.kh.practice1.func;
+
+import java.util.Scanner;
+
+public class Test41 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("행 크기 : ");
+		int num1 = sc.nextInt();
+		System.out.print("열 크기 : ");
+		int num2 = sc.nextInt();
+
+		while (!(1 <= num1 && num1 <= 10 && 1 <= num2 && num2 <= 10)) {
+			
+			System.out.print("반드시 1~10 사이의 정수를 입력해야 합니다");
+			
+			System.out.print("행 크기 : ");
+			num1 = sc.nextInt();
+			System.out.print("열 크기 : ");
+			num2 = sc.nextInt();
+			
+		}
+		int ar[][] = new int[num1][num2];
+
+		}
+	}
+
+

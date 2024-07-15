@@ -1,0 +1,10 @@
+package com.kh.practice1.func;
+
+public class Test25 {
+	public static void main(String [] args) {
+		
+		int ar[] = new int [10];
+		System.out.println(ar);
+	}
+
+}

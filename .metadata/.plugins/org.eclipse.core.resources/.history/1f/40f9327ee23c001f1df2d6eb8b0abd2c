@@ -1,0 +1,20 @@
+package com.kh.practice1.func;
+
+import java.util.Arrays;
+
+public class Test25 {
+	public static void main(String[] args) {
+
+		int[] num = new int[10];
+		
+		
+		int add = 1;
+		for(int i = 0; i < num.length; i++) {
+			num[i] = add + i;  
+		}
+		
+		for(int i = 0;  i < num.length; i++ ) {
+			System.out.println(num[i] + " ");
+		}
+		
+}}

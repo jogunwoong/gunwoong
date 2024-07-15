@@ -1,0 +1,36 @@
+package com.kh.practice1.func;
+
+import java.util.Scanner;
+
+public class Test32 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		
+		int ar[] = new int [num];
+		
+		ar[0] = 1;
+		ar[1] = 2;
+		ar[2] = 3;
+		ar[3] = 2;
+		ar[4] = 1;	
+		
+		if (3 < num || num % 2 == 0) {
+			for (int i = 1; i<num/2+2;i++) {
+				ar[i] += i;
+				System.out.println(i);
+			}
+			for (int i = num; i<num/2;i++) {
+				System.out.println(i);
+			}
+			
+				
+			
+
+		}
+
+	}
+
+}

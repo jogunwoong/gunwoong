@@ -1,0 +1,19 @@
+package com.kh.practice1.func;
+
+import java.util.Arrays;
+
+public class Test25 {
+	public static void main(String[] args) {
+
+		int[] arr1 = { 1, 2, 3, 4 };
+		int[] arr2 = new int[4];
+		for (int i = 0; i < arr1.length; i++) {
+			arr2[i] = arr1[i];
+		}
+		System.arraycopy(arr1, 0, arr2, 0, arr1.length);
+		arr2 = Arrays.copyOf(arr1, arr1.length);
+		arr2 = arr1.clone();
+		
+		System.out.println(arr1);
+	}
+}

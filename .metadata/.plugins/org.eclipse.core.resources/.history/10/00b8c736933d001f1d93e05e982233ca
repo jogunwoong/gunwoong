@@ -1,0 +1,17 @@
+package com.kh.practice1.func;
+
+public class Test39 {
+
+	public static void main(String []args) {
+		int[][] ar = new int [4][4];
+		
+		for (int i = 1; i < ar.length; i++) {
+			for(int j = i; j < ar.length; j++) {
+				ar[i][j] = i + j;
+				System.out.print(ar[i][j] + " ");
+				
+			}
+			System.out.println();
+		}
+	}
+}

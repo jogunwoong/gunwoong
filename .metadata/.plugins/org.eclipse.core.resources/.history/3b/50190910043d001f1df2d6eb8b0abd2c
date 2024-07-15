@@ -1,0 +1,30 @@
+package com.kh.practice1.func;
+
+import java.util.Scanner;
+
+public class Test31 {
+	public static void main(String []args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+		int ar [] = new int [num];
+		
+		
+			System.out.print("배열 0번째 인덱스에 넣을 값 : ");
+			int a = sc.nextInt();
+			System.out.print("배열 1번째 인덱스에 넣을 값 : ");
+			int b = sc.nextInt();
+			System.out.print("배열 2번째 인덱스에 넣을 값 : ");
+			int c = sc.nextInt();
+			System.out.print("배열 3번째 인덱스에 넣을 값 : ");
+			int d = sc.nextInt();
+			System.out.print("배열 4번째 인덱스에 넣을 값 : ");
+			int e = sc.nextInt();
+			
+			System.out.print(a + " " + b + " " + c + " " + d + " " + e);
+		
+	}
+	
+
+}

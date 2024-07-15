@@ -1,0 +1,7 @@
+package com.kh.practice;
+
+
+//Thread 정의방법 2) Runnable 인터페이스 구현
+public class Task2 implements Runnable{
+
+}

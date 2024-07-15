@@ -1,0 +1,18 @@
+package com.kh.practice1.func;
+
+import java.util.Arrays;
+
+public class Test25 {
+	public static void main(String[] args) {
+
+		int[] num = new int[10];
+
+	
+
+	
+
+		for (int i = 1; i < num.length; i++) {
+			System.out.print(num[i] + " ");
+		}
+	}
+}
